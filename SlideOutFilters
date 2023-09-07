@@ -1,0 +1,95 @@
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<div class="container">
+  
+  <button type="button" class="">Toggle</button>
+
+  <div id="slideout">
+    <form>
+          <select id="addNeed" class="" data-position="bottom" data-tooltip=""><i class="material-icons">assignment_ind</i>
+         
+          
+        <option type="option" class="dropdown-option">Option 1</option>
+        <option type="option" class="dropdown-option">Option 2</option>
+        <option type="option" class="dropdown-option">Option 3</option>
+    		
+         </select>
+     
+          <select id="addNeed1" class="" data-position="bottom" data-tooltip=""><i class="material-icons">assignment_ind</i>
+         
+          
+        <option type="option" class="dropdown-option">Option 1</option>
+        <option type="option" class="dropdown-option">Option 2</option>
+        <option type="option" class="dropdown-option">Option 3</option>
+    		
+         </select>
+
+          <select id="addNeed2" class="" data-position="bottom" data-tooltip=""><i class="material-icons">assignment_ind</i>
+        <option type="option" class="dropdown-option">Option 1</option>
+        <option type="option" class="dropdown-option">Option 2</option>
+        <option type="option" class="dropdown-option">Option 3</option>
+    		
+         </select>
+     
+
+     
+        <!-- <li>
+          <a class="btn-floating "><i class="material-icons">attach_file</i></a>
+        </li> -->
+
+      <button type="button" class="">close</button>
+    </form>
+  </div>
+</div>
+
+<style>
+.container {
+  margin-top: 20px;
+}
+
+#slideout {
+  background: #dbe2e9;
+  color: #333;
+  position: fixed;
+  top: 0;
+  left: -800px;
+  width: 600px;
+  height: 100%;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+#slideout form {
+  display: block;
+  padding: 20px;
+}
+
+#slideout.on {
+  left: 0;
+}
+
+</style>
+
+<script>
+$('button').click(function(){
+  $('#slideout').toggleClass('on');
+});
+
+      var addNeed = document.getElementById("addNeed");
+ var addNeed1 = document.getElementById("addNeed1");
+ var addNeed2 = document.getElementById("addNeed2");
+    
+
+function option1Clickedw() {
+        UB.updateValue({opt:addNeed.value,opt1:addNeed1.value,opt2:addNeed2.value});
+      }
+
+      var addNeed = document.getElementById("addNeed2");
+ var addNeed1 = document.getElementById("addNeed1");
+ var addNeed2 = document.getElementById("addNeed");
+
+      addNeed.addEventListener("click", option1Clickedw)
+     addNeed1.addEventListener("click", option1Clickedw) 
+addNeed2.addEventListener("click", option1Clickedw)
+</script>
